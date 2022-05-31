@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenido %}
+<main>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">CUIT</th>
+        <th scope="col">RAZON SOCIAL</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for proveedores in proveedores %}
+        <th scope="row">{{proveedores.id}}</th>
+        <td>{{proveedores.vendorID}}</td>
+        <td>{{proveedores.vendorname}}</td>
+      </tr>
+        {% endfor %}
+      </tbody>
+</table>
+</main>
+    
+{% endblock %}

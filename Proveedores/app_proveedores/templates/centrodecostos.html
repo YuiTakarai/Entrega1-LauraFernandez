@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenido %}
+<main>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Centro de Costos</th>
+        <th scope="col">Tipo de Gasto</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for ccdatos in ccdatos %}
+        <th scope="row">{{ccdatos.id}}</th>
+        <td>{{ccdatos.centrocosto}}</td>
+        <td>{{ccdatos.expensetype}}</td>
+      </tr>
+        {% endfor %}
+      </tbody>
+</table>
+</main>
+    
+{% endblock %}

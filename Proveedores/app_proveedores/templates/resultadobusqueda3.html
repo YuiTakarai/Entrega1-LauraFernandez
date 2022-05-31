@@ -1,0 +1,21 @@
+{% extends  "index.html" %}
+
+
+{% load static %}
+
+{% block contenido %}
+ 
+{% if datos %}
+
+<ul>
+{% for i in datos %}
+<li>Centro de Costo: {{i.centrocosto}}</li>
+<li>Tipo Gasto: {{i.expensetype}}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No se encontró el centro de costos</p>
+{% endif %}
+
+
+{% endblock %}

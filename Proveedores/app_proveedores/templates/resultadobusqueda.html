@@ -1,0 +1,21 @@
+{% extends  "index.html" %}
+
+
+{% load static %}
+
+{% block contenido %}
+ 
+{% if datos %}
+
+<ul>
+{% for i in datos %}
+<li>CuitNro: {{i.vendorID}}</li>
+<li>Razon Social: {{i.vendorname}}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No se encontró el proveedor</p>
+{% endif %}
+
+
+{% endblock %}

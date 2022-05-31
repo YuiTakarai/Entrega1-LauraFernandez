@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block contenido %}
+
+
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'altaproveedores'%}">Alta Proveedores</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'altacentrocosto'%}">Alta Centro de Costos</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'altadocumentos'%}">Carga Documentos</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'maestroproveedores'%}">Maestro Proveedores</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'centrodecostos'%}">Centro de Costos</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'documentos'%}">Documentos</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'consultas'%}">Consultas por CUIT</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'consultas2'%}">Consultas Gs por CC</a>
+<a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'consultas3'%}">Consultas CC</a>
+{% endblock %}

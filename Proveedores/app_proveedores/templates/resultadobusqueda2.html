@@ -1,0 +1,46 @@
+{% extends  "index.html" %}
+
+
+{% load static %}
+
+{% block contenido %}
+<main>
+{% if datos_1 %}
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">CUIT</th>
+            <th scope="col">RAZON SOCIAL</th>
+            <th scope="col">NRO DOCUMENTO</th>
+            <th scope="col">FECHA DOCUMENTO</th>
+            <th scope="col">IMPORTE NETO</th>
+            <th scope="col">ID MONEDA</th>
+            <th scope="col">CENTRO DE COSTO</th>
+            <th scope="col">TIPO DE GASTO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for n in datos_1 %}
+                <th scope="row">{{n.id}}</th>
+                <td>{{n.vendorID}}</td>
+                <td>{{n.vendorname}}</td>
+                <td>{{n.docnumber}}</td>
+                <td>{{n.docdate}}</td>
+                <td>{{n.docamount}}</td>
+                <td>{{n.doccurrency}}</td>
+                <td>{{n.centrocosto}}</td>
+                <td>{{n.expensetype}}</td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% else %}
+<p>No se encontró el centro de costos</p>
+{% endif %}
+</main>
+
+{% endblock %}

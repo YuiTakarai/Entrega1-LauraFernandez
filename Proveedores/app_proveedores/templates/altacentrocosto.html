@@ -1,0 +1,18 @@
+{% extends  "index.html" %}
+
+
+{% load static %}
+
+{% block contenido %}
+    <form action="altacentrocosto" method="POST">
+        {% csrf_token %}
+        <p>Tipo de Gasto:</p>
+        <input type="text" name="expensetype" required>
+        <p>Centro de Costo:</p>
+        <input type="text" name="centrocosto" required>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+
+{% endblock %}

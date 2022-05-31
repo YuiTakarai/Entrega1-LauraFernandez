@@ -1,0 +1,16 @@
+{% extends  "index.html" %}
+
+
+{% load static %}
+
+{% block contenido %}
+
+<h3>Consultas Maestro Proveedores</h3>
+<form action="resultadobusqueda">
+    <p>CUIT</p>
+    <input type="number" name="vendorID">
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% endblock %}

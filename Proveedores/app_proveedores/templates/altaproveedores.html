@@ -1,0 +1,21 @@
+{% extends  "index.html" %}
+
+
+{% load static %}
+
+{% block contenido %}
+<body>
+    <form action="altaproveedores" method="POST">
+        {% csrf_token %}
+        <p>CUIT:</p>
+        <input type="number" name="vendorID" required>
+        <p>RAZON SOCIAL:</p>
+        <input type="text" name="vendorname" required>
+       
+    
+        <input type="submit" value="Enviar">
+    
+    </form>
+    
+</body>
+{% endblock %}
